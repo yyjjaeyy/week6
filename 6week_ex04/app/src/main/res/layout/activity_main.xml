@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="TableLayout 실습"
+        android:textColor="#8BC34A"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <TableRow android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/et_turtle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bg4_4"
+                android:gravity="center"
+                android:inputType="number" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="거북이"
+                android:src="@drawable/turtle" />
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/et_fish"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bg4_4"
+                android:gravity="center"
+                android:inputType="number" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="물고기"
+                android:src="@drawable/fish" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="#26C6DA"
+        android:text="결과보기"
+        android:onClick="onResultClick" />
+
+</LinearLayout>

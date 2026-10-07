@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="FrameLayout 실습"
+        android:textColor="#8BC34A"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- 왼쪽: 캐릭터 + 왕관/목걸이 아이템 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="170dp"
+                android:layout_height="320dp">
+
+                <ImageView
+                    android:id="@+id/iv_body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="캐릭터"
+                    android:src="@drawable/body" />
+
+                <ImageView
+                    android:id="@+id/iv_dress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="110dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="드레스"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/iv_necklace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="90dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="목걸이"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/iv_crown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="왕관"
+                    android:visibility="invisible" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/item_crown1"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="왕관1"
+                    android:onClick="onItemClick"
+                    android:src="@drawable/crown1" />
+
+                <ImageView
+                    android:id="@+id/item_crown2"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="왕관2"
+                    android:onClick="onItemClick"
+                    android:src="@drawable/crown2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/item_necklace1"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="목걸이1"
+                    android:onClick="onItemClick"
+                    android:src="@drawable/necklace1" />
+
+                <ImageView
+                    android:id="@+id/item_necklace2"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="목걸이2"
+                    android:onClick="onItemClick"
+                    android:src="@drawable/necklace2" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 오른쪽: 드레스 3벌 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/item_dress1"
+                android:layout_width="120dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:contentDescription="드레스1"
+                android:onClick="onItemClick"
+                android:scaleType="fitCenter"
+                android:src="@drawable/dress1" />
+
+            <ImageView
+                android:id="@+id/item_dress2"
+                android:layout_width="120dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:contentDescription="드레스2"
+                android:onClick="onItemClick"
+                android:scaleType="fitCenter"
+                android:src="@drawable/dress2" />
+
+            <ImageView
+                android:id="@+id/item_dress3"
+                android:layout_width="120dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:contentDescription="드레스3"
+                android:onClick="onItemClick"
+                android:scaleType="fitCenter"
+                android:src="@drawable/dress3" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="#26C6DA"
+        android:text="다시하기"
+        android:onClick="onResetClick" />
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="LinearLayout 실습"
+        android:textColor="#8BC34A"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="비교 그림"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_greater"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:background="#00000000"
+            android:contentDescription="크다"
+            android:onClick="onCompareClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn1m" />
+
+        <ImageButton
+            android:id="@+id/btn_less"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:background="#00000000"
+            android:contentDescription="작다"
+            android:onClick="onCompareClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn2m" />
+
+        <ImageButton
+            android:id="@+id/btn_equal"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:background="#00000000"
+            android:contentDescription="같다"
+            android:onClick="onCompareClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn3m" />
+
+    </LinearLayout>
+
+</LinearLayout>
